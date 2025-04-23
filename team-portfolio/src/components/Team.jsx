@@ -5,8 +5,26 @@ import pits from '../assets/pits.png';
 import rod from '../assets/rod.png';
 import Card from './Card';
 import { motion } from "framer-motion";
+import { useState, useEffect } from 'react';
+
+
 
 function Team() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        // Initial check
+        handleResize();
+
+        // Listen for window resize
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
 
     return (
 
@@ -17,10 +35,10 @@ function Team() {
                 <motion.div
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                    transition={{ duration: 0.5, ease: "easeOut"}}
+                    transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.5 }}
                     className="absolute top-14 left-1/2 -translate-x-1/2"
                 >
-                    <h1 className="text-white opacity-4 text-[140px] font-extrabold z-0 scale-200">
+                    <h1 className="members-text text-white opacity-4 text-[140px] font-extrabold z-0 scale-200">
                         MEMBERS
                     </h1>
                 </motion.div>
@@ -31,9 +49,9 @@ function Team() {
                     <motion.div
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.5, ease: "easeOut", delay : 0.4}}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.4 }}
                         className="relative text-center bg-clip-text">
-                        <h1 className='text-transparent text-5xl font-extrabold bg-clip-text 
+                        <h1 className='get-2-know-text text-transparent text-5xl font-extrabold bg-clip-text 
                                 bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] inline-block'>
                             GET TO KNOW US
                         </h1>
@@ -44,7 +62,7 @@ function Team() {
                             <motion.div
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                            transition={{ duration: 0.5, ease: "easeOut", delay : 0.6}}>
+                            transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.5 }}>
                             <Card
                                 img={harv}
                                 name='Jan Harvey Javier'
@@ -54,7 +72,7 @@ function Team() {
                             <motion.div
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                            transition={{ duration: 0.5, ease: "easeOut", delay : 0.7}}>
+                            transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.6 }}>
                                 <Card
                                     img={nyel}
                                     name='Dhaniel Lofamia'
@@ -64,7 +82,7 @@ function Team() {
                             <motion.div
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                            transition={{ duration: 0.5, ease: "easeOut", delay : 0.8}}>
+                            transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.7 }}>
                             <Card
                                 img={nix}
                                 name='Carlos Jr Nicol'
@@ -78,7 +96,7 @@ function Team() {
                             <motion.div
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                            transition={{ duration: 0.5, ease: "easeOut", delay : 0.9}}>
+                            transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.3 }}>
                                 <Card
                                     img={pits}
                                     name='John Patrick Macaspac'
@@ -88,7 +106,7 @@ function Team() {
                             <motion.div
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                            transition={{ duration: 0.5, ease: "easeOut", delay : 1}}>
+                            transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.4 }}>
                                 <Card
                                     img={rod}
                                     name='Rodney Santos'

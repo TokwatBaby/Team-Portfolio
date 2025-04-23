@@ -6,6 +6,8 @@ import ExpensaImg from "../assets/Expensa.png";
 import ScholarshipImg from "../assets/Scholarship.png";
 import AlumniImg from "../assets/Alumni.png";
 import LoginImg from "../assets/Login.png";
+import { useState, useEffect } from 'react';
+
 
 function Projects() {
     const projects = [
@@ -31,6 +33,21 @@ function Projects() {
         },
     ];
 
+    const [isMobile, setIsMobile] = useState(false);
+    
+        useEffect(() => {
+            const handleResize = () => {
+                setIsMobile(window.innerWidth <= 768);
+            };
+    
+            // Initial check
+            handleResize();
+    
+            // Listen for window resize
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }, []);
+
     return (
         <section className="text-white py-16 px-10 relative overflow-hidden bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)]">
             {/* Title Block */}
@@ -41,7 +58,7 @@ function Projects() {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                     className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none"
                 >
-                    <h1 className="absolute top-14 left-1/2 -translate-x-1/2 text-white 
+                    <h1 className="projects-text absolute top-14 left-1/2 -translate-x-1/2 text-white 
                         opacity-4 text-[140px] font-extrabold z-0 scale-200">
                         PROJECTS
                     </h1>
@@ -50,8 +67,8 @@ function Projects() {
                 <motion.p
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                    transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-                    className="text-transparent text-5xl font-extrabold bg-clip-text 
+                    transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.4 }}
+                    className="projects-colored-text text-transparent text-5xl font-extrabold bg-clip-text 
                         bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] inline-block"
                 >
                     PROJECTS
@@ -63,13 +80,13 @@ function Projects() {
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
-                        className="flex w-full project-container"
+                        className="flex w-full px-2 sm:px-0"
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{
                             duration: 0.6,
                             ease: "easeOut",
-                            delay: 0.2 + index * 0.2,
+                            delay: isMobile ? 0 : 0.2 + index * 0.2,
                         }}
                     >
                         {/* Vertical gradient line */}

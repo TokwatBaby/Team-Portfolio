@@ -12,7 +12,7 @@ function Header() {
     ];
 
     return (
-        <header className="flex justify-center fixed object-bottom bottom-10 w-full z-10 bg-transparent bg-clip-text">
+        <header className="flex justify-center fixed bottom-10 w-full z-50 bg-transparent">
             <nav>
                 <ul className="flex justify-center space-x-10 p-[15px] w-90 rounded-full text-white 
                             bg-[linear-gradient(to_bottom,_rgba(51,51,51,0.75),_rgba(37,37,37,0.75))]">

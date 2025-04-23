@@ -6,7 +6,7 @@ function About() {
                         2xl:p-20
                         bg-[linear-gradient(to_top,_#0D0D0D,_#1E1E1E)]">
 
-            <div className="absolute top-14 left-1/2 -translate-x-1/2 flex text-center text-white 
+            <div className=" absolute top-14 left-1/2 -translate-x-1/2 flex text-center text-white 
                             opacity-4 text-[150px] font-extrabold z-0 scale-150">
                 ABOUT US
             </div>
