@@ -37,34 +37,7 @@ function Profilepage() {
     const [activeIndex, setActiveIndex] = useState(0);
     const sectionRefs = useRef([]);
 
-    useEffect(() => {
-        // This will trigger the scroll animation to the first member on page load
-        const element = document.getElementById(teamMembers[0].name.replace(/,|\s+/g, "-"));
-        if (element) {
-            const scrollToElement = (target) => {
-                const start = window.scrollY;
-                const end = target.getBoundingClientRect().top + window.scrollY;
-                const distance = end - start;
-                const duration = 500; // duration in ms (adjust for speed)
-                let startTime;
 
-                const scroll = (currentTime) => {
-                    if (!startTime) startTime = currentTime;
-                    const elapsed = currentTime - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    window.scrollTo(0, start + distance * progress);
-
-                    if (elapsed < duration) {
-                        window.requestAnimationFrame(scroll);
-                    }
-                };
-
-                window.requestAnimationFrame(scroll);
-            };
-
-            scrollToElement(element);
-        }
-    }, []);
 
     useEffect(() => {
         // Check if there's a selected member in localStorage
@@ -140,14 +113,18 @@ function Profilepage() {
         }
     }, []);
 
+    const scrollingRef = useRef(false);
+
     useEffect(() => {
         const observerOptions = {
             root: null,
             rootMargin: "0px",
-            threshold: 0.6, // Adjust this to trigger earlier/later
+            threshold: 0.6,
         };
 
         const observerCallback = (entries) => {
+            if (scrollingRef.current) return; // prevent updates during programmatic scroll
+
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     const index = sectionRefs.current.findIndex(ref => ref === entry.target);
@@ -169,8 +146,8 @@ function Profilepage() {
                 if (ref) observer.unobserve(ref);
             });
         };
-    });
-
+    }, []);
+    
     const teamMembers = [
         {
             name: "Dhaniel, Lofamia",
