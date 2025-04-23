@@ -35,6 +35,7 @@ function GradientBullet() {
 
 function Profilepage() {
     const [activeIndex, setActiveIndex] = useState(0);
+    const sectionRefs = useRef([]);
 
     useEffect(() => {
         // This will trigger the scroll animation to the first member on page load
@@ -65,7 +66,79 @@ function Profilepage() {
         }
     }, []);
 
-    const sectionRefs = useRef([]);
+    useEffect(() => {
+        // Check if there's a selected member in localStorage
+        const selectedMember = localStorage.getItem('selectedMember');
+
+        if (selectedMember) {
+            // Find the index of the selected member
+            const index = teamMembers.findIndex(member =>
+                member.name === selectedMember
+            );
+
+            if (index !== -1) {
+                setActiveIndex(index);
+
+                // Scroll to the member's section after a short delay to ensure rendering
+                setTimeout(() => {
+                    const element = document.getElementById(selectedMember.replace(/,|\s+/g, "-"));
+                    if (element) {
+                        const scrollToElement = (target) => {
+                            const start = window.scrollX;
+                            const end = target.getBoundingClientRect().top + window.scrollX;
+                            const distance = end - start;
+                            const duration = 1000;
+                            let startTime;
+
+                            const scroll = (currentTime) => {
+                                if (!startTime) startTime = currentTime;
+                                const elapsed = currentTime - startTime;
+                                const progress = Math.min(elapsed / duration, 1);
+                                window.scrollTo(0, start + distance * progress);
+
+                                if (elapsed < duration) {
+                                    window.requestAnimationFrame(scroll);
+                                }
+                            };
+
+                            window.requestAnimationFrame(scroll);
+                        };
+
+                        scrollToElement(element);
+                    }
+                },);
+
+                // Clear the localStorage after use
+                localStorage.removeItem('selectedMember');
+            }
+        } else {
+            // Default behavior when no member is selected
+            const element = document.getElementById(teamMembers[0].name.replace(/,|\s+/g, "-"));
+            if (element) {
+                const scrollToElement = (target) => {
+                    const start = window.scrollX;
+                    const end = target.getBoundingClientRect().top + window.scrollX;
+                    const distance = end - start;
+                    const duration = 1000;
+                    let startTime;
+
+                    const scroll = (currentTime) => {
+                        if (!startTime) startTime = currentTime;
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        window.scrollTo(0, start + distance * progress);
+
+                        if (elapsed < duration) {
+                            window.requestAnimationFrame(scroll);
+                        }
+                    };
+
+                    window.requestAnimationFrame(scroll);
+                };
+                scrollToElement(element);
+            }
+        }
+    }, []);
 
     useEffect(() => {
         const observerOptions = {
@@ -334,11 +407,10 @@ function Profilepage() {
                     initial={{ y: -300, opacity: 0 }}
                     animate={{ y: 0, opacity: 5 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="w-full px-3 sm:px-4 lg:px-6 p-6 bg-gray-900 text-white font-semibold bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)] flex flex-col items-center bg-clip-text"
+                    className="sticky top-10 h-screen overflow-y-auto z-10 w-full px-3 sm:px-4 lg:px-6 p-6 bg-gray-900 text-white font-semibold bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)] flex flex-col items-center bg-clip-text"
                 >
                     {/* Logo and Brand */}
-                    <div className="flex items-center gap-2 md:gap-3 mb-8 md:mb-16">
-
+                    <div className="flex items-center gap-2 md:gap-3 mb-8 md:mb-16" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                         <div className="w-8 h-8 md:w-12 md:h-12 rounded-full border-2 border-white flex items-center justify-center">
                             <span className="text-white text-md md:text-xl">&lt;/&gt;</span>
                         </div>
@@ -346,10 +418,14 @@ function Profilepage() {
                     </div>
 
                     {/* About Us Header */}
-                    <h2 className="text-3xl md:text-6xl font-bold mb-12 md:mb-24 text-center">About Us</h2>
-
+                    <h2
+                        className="text-3xl md:text-6xl font-bold mb-12 md:mb-24 text-center"
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    >
+                        About Us
+                    </h2>
                     {/* Team Member List */}
-                    <div className="text-left overflow-hidden sticky top-30 h-screen overflow-y-auto z-10 w-full">
+                    <div className="text-left overflow-hidden">
                         <div className="h-[300px] md:h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                             <ul className="space-y-4 md:space-y-6">
                                 {teamMembers.map((member, index) => {
