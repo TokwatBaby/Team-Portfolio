@@ -37,14 +37,11 @@ function Profilepage() {
     const [activeIndex, setActiveIndex] = useState(0);
     const sectionRefs = useRef([]);
 
-
-
     useEffect(() => {
         // Check if there's a selected member in localStorage
         const selectedMember = localStorage.getItem('selectedMember');
 
         if (selectedMember) {
-            // Find the index of the selected member
             const index = teamMembers.findIndex(member =>
                 member.name === selectedMember
             );
@@ -57,8 +54,8 @@ function Profilepage() {
                     const element = document.getElementById(selectedMember.replace(/,|\s+/g, "-"));
                     if (element) {
                         const scrollToElement = (target) => {
-                            const start = window.scrollX;
-                            const end = target.getBoundingClientRect().top + window.scrollX;
+                            const start = window.scrollY;
+                            const end = target.getBoundingClientRect().top + window.scrollY;
                             const distance = end - start;
                             const duration = 1000;
                             let startTime;
@@ -79,7 +76,7 @@ function Profilepage() {
 
                         scrollToElement(element);
                     }
-                },);
+                }, 200); // Delay of 200ms to ensure rendering
 
                 // Clear the localStorage after use
                 localStorage.removeItem('selectedMember');
@@ -89,8 +86,8 @@ function Profilepage() {
             const element = document.getElementById(teamMembers[0].name.replace(/,|\s+/g, "-"));
             if (element) {
                 const scrollToElement = (target) => {
-                    const start = window.scrollX;
-                    const end = target.getBoundingClientRect().top + window.scrollX;
+                    const start = window.scrollY;
+                    const end = target.getBoundingClientRect().top + window.scrollY;
                     const distance = end - start;
                     const duration = 1000;
                     let startTime;
@@ -137,8 +134,11 @@ function Profilepage() {
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-        sectionRefs.current.forEach((ref) => {
-            if (ref) observer.observe(ref);
+        // Ensure refs are populated before observing
+        requestAnimationFrame(() => {
+            sectionRefs.current.forEach((ref) => {
+                if (ref) observer.observe(ref);
+            });
         });
 
         return () => {
@@ -147,7 +147,6 @@ function Profilepage() {
             });
         };
     }, []);
-    
     const teamMembers = [
         {
             name: "Dhaniel, Lofamia",
