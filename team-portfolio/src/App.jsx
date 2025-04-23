@@ -1,22 +1,25 @@
-import "@fontsource/poppins";
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/600.css';
-import '@fontsource/poppins/700.css';
-import '@fontsource/poppins/800.css';
-import Homepage from "./pages/Homepage";
-import ProjectPage from "./pages/ProjectPage";
+import {Routes,Route} from 'react-router-dom';
+import ProjectPage from './pages/ProjectPage';
+import Header from './components/Header.Jsx';
+import Homepage from './pages/Homepage.Jsx';
+import ProfilePage from './pages/ProfilePage';
+import ContactPage from './components/Contact';
+
 
 function App() {
-  
-  return(
 
+  return (
     <>
-      {/* <Homepage/> */}
-      <ProjectPage />
+    <Header/>
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/Homepage" element={<Homepage />} />
+      <Route path="/ProjectPage" element={<ProjectPage />} />
+      <Route path="/ProfilePage" element={<ProfilePage />} />
+      <Route path="/ContactPage" element={<ContactPage />} />
+    </Routes>
     </>
-    
-  );
-  
+  )
 }
 
 export default App
