@@ -99,7 +99,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
                             transition={{
                                 ease: "easeOut",
                                 duration: 0.3,
-                                delay: isMobile ? 0 : 1.3 + idx * 0.1,
+                                delay: isMobile ? 0 : 0.2 + idx * 0.1,
                             }}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
