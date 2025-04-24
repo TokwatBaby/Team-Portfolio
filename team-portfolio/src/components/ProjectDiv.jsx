@@ -94,7 +94,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
                     }].map(({ icon, label }, idx) => (
                         <motion.div
                             key={label}
-                            className="flex items-center justify-center border-white border-2 rounded-4xl p-3 gap-1"
+                            className="flex items-center justify-center border-white border-2 rounded-4xl p-2 gap-1"
                             whileHover={{ scale: 1.05 }}
                             transition={{
                                 ease: "easeOut",
