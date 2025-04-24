@@ -59,15 +59,15 @@ function ContactPage() {
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.5 }}
-                    className='get-in-touch-div relative flex flex-col pt-20 px-80 gap-6 justify-center text-center bg-clip-text'>
-                    <h2 className='text-white text-4xl font-bold bg-clip-text'>
+                    className='get-in-touch-div relative flex flex-col px-16 lg:px-80 gap-6 justify-center text-center bg-clip-text'>
+                    <h2 className='text-white text-2xl md:text-4xl font-bold bg-clip-text'>
                         Get in touch with us!
                     </h2>
                     <motion.p
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.6 }}
-                        className='text-white text-base font-medium bg-clip-text'>
+                        className='text-white text-[11px] sm:text-base font-medium bg-clip-text'>
                         Fill out the email form below for inquiries, connect with us through our social 
                         media links, or calls us directly at (+63)9876543210. DevNexus are here to help 
                         and looking forward to hearing from you!
