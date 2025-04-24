@@ -39,7 +39,7 @@ function ContactPage() {
 
                 <section className="relative flex flex-col justify-center items-center p-8 bg-clip-text">
 
-                    <motion.div
+                    <div
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.4 }}
@@ -48,7 +48,7 @@ function ContactPage() {
                             bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] inline-block'>
                             CONTACT
                         </h1>
-                    </motion.div>
+                    </div>
 
                     <motion.div
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}

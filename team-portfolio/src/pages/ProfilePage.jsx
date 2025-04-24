@@ -159,7 +159,7 @@ function Profilepage() {
             email: "janharvey@example.com",
             socialIcons: [
                 { Icon: FaFacebook, color: "#1877F2", link: "https://www.facebook.com/janjan0119" },
-                { Icon: FaEnvelope, color: "#D44638", link: "mailto:ic.janharvey.javier@cvsu.edu.ph" },
+                { Icon: FaEnvelope, color: "#D44638", link: "https://mail.google.com/mail/?view=cm&fs=1&to=ic.janharvey.javier@cvsu.edu.ph" },
                 { Icon: FaGithub, color: "#555555", link: "https://github.com/TokwatBaby" },
             ],
             workProcess: [
@@ -206,7 +206,7 @@ function Profilepage() {
             socialIcons: [
                 { Icon: FaFacebook, color: "#1877F2", link: "https://www.facebook.com/jeongyeooniee" },
                 { Icon: FaInstagram, color: "#E1306C", link: " https://www.instagram.com/dhnlein?igsh=a2ttejM0M2JxeHdx" },
-                { Icon: FaEnvelope, color: "#D44638", link: "mailto:dhanieeel0907@gmail.com" },
+                { Icon: FaEnvelope, color: "#D44638", link: "https://mail.google.com/mail/?view=cm&fs=1&to=dhanieeel0907@gmail.com" },
                 { Icon: FaGithub, color: "#555555", link: "https://github.com/karinaonly" },
             ],
             workProcess: [
@@ -249,7 +249,7 @@ function Profilepage() {
             email: "ic.carlosjr.nicol@cvsu.edu.ph",
             socialIcons: [
                 { Icon: FaFacebook, color: "#1877F2", link: "https://www.facebook.com/Payaat.06" },
-                { Icon: FaEnvelope, color: "#D44638", link: "mailto:ic.carlosjr.nicol@cvsu.edu.ph" },
+                { Icon: FaEnvelope, color: "#D44638", link: "https://mail.google.com/mail/?view=cm&fs=1&to=ic.carlosjr.nicol@cvsu.edu.ph" },
                 { Icon: FaGithub, color: "#555555", link: "https://github.com/6nix" },
             ],
             workProcess: [
@@ -295,7 +295,7 @@ function Profilepage() {
             socialIcons: [
                 { Icon: FaFacebook, color: "#1877F2", link: "https://www.facebook.com/JpMacaspac08" },
                 { Icon: FaInstagram, color: "#E1306C", link: "https://www.instagram.com/jp_macaspac?igsh=bmhhd2lmNmc1ZzFl" },
-                { Icon: FaEnvelope, color: "#D44638", link: "mailto:ic.johnpatrick.macaspac@cvsu.edu.ph" },
+                { Icon: FaEnvelope, color: "#D44638", link: "https://mail.google.com/mail/?view=cm&fs=1&to=ic.johnpatrick.macaspac@cvsu.edu.ph" },
                 { Icon: FaGithub, color: "#555555", link: "https://github.com/JPMacaspac" },
             ],
             workProcess: [
@@ -346,7 +346,7 @@ function Profilepage() {
             socialIcons: [
                 { Icon: FaFacebook, color: "#1877F2", link: "https://www.facebook.com/rodney.santos.397" },
                 { Icon: FaInstagram, color: "#E1306C", link: "https://www.instagram.com/_ewankosayo_/" },
-                { Icon: FaEnvelope, color: "#D44638", link: "mailto:rodneysantos22@gmail.com" },
+                { Icon: FaEnvelope, color: "#D44638", link: "https://mail.google.com/mail/?view=cm&fs=1&to=rodneysantos22@gmail.com" },
                 { Icon: FaGithub, color: "#555555", link: "https://github.com/Rodney22-blimp" },
             ],
             workProcess: [
