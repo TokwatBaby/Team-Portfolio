@@ -79,22 +79,22 @@ function ContactPage() {
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.3 }}
-                    href="#"><img src={facebook} alt="facebook" className=' w-14 h-14 ' /></motion.a>
+                    href="#"><img src={facebook} alt="facebook" className='w-11 md:w-14 h-11 md:h-14' /></motion.a>
                     <motion.a
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.4 }}
-                    href="#"><img src={linkedin} alt="linkedin" className='w-14 h-14' /></motion.a>
+                    href="#"><img src={linkedin} alt="linkedin" className='w-11 md:w-14 h-11 md:h-14' /></motion.a>
                     <motion.a
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.5 }}
-                    href="#"><img src={github} alt="github" className='w-14 h-14' /></motion.a>
+                    href="#"><img src={github} alt="github" className='w-11 md:w-14 h-11 md:h-14' /></motion.a>
                     <motion.a
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.6 }}
-                    href="#"><img src={x} alt="x" className='w-14 h-14' /></motion.a>
+                    href="#"><img src={x} alt="x" className='w-11 md:w-14 h-11 md:h-14' /></motion.a>
                 </div>
 
                 <div className='grid grid-cols-2 gap-6 w-3xl bg-clip-text px-14 sm:px-10 md:px-6 lg:px-0'>
