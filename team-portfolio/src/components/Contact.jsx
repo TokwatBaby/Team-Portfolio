@@ -97,40 +97,40 @@ function ContactPage() {
                     href="#"><img src={x} alt="x" className='w-14 h-14' /></motion.a>
                 </div>
 
-                <div className='inputs-div grid grid-cols-2 gap-6 w-3xl bg-clip-text'>
+                <div className='grid grid-cols-2 gap-6 w-3xl bg-clip-text px-14 sm:px-10 md:px-6 lg:px-0'>
                     <motion.div
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.3 }}
-                        className="h-full">
+                        className="col-span-2 md:col-span-1 w-full">
                             <Input label='Name' />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.4 }}
-                        className="h-full">
+                        className="col-span-2 md:col-span-1 w-full">
                         <Input label='Email' />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.5 }}
-                        className="col-span-2 h-full">
+                        className="col-span-2 w-full">
                         <Input label='Subject' />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.5 }}
-                        className="col-span-2 h-full">
+                        className="col-span-2 w-full">
                         <Input label='Message' textarea/>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.6 }}
-                        className='col-span-2 h-full text-end bg-clip-text'>
+                        className='col-span-2 h-full text-center md:text-end bg-clip-text'>
                         <button className='px-5 py-2 text-[#6E6E6E] font-bold text-lg
                                         bg-[linear-gradient(to_right,_#2E2E2E,_#3A3A3A)]
                                         hover:bg-[linear-gradient(to_right,_#00FFFF,_#00A3FF)]
