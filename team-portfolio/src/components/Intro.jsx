@@ -4,6 +4,7 @@ import group from '../assets/group.png';
 import Principle from './TeamMission';
 import Principle1 from './TeamVision';
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { TypeAnimation } from 'react-type-animation';
 
 function Intro() {
     const containerRef = useRef(null);
@@ -50,10 +51,7 @@ function Intro() {
             setIsMobile(window.innerWidth <= 768);
         };
 
-        // Initial check
         handleResize();
-
-        // Listen for window resize
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -64,68 +62,42 @@ function Intro() {
             bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)]">
 
             <section className="relative flex flex-col justify-center p-4 sm:p-6 md:p-8">
-
-                {/* Border corners */}
-                <motion.div
-                className="absolute top-0 left-0 w-24 h-24"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
-                >
-                {/* Top Line */}
-                <div className="animated-corner h-[4px] w-full rounded-tl-2xl" />
-                {/* Left Line */}
-                <div className="animated-corner w-[4px] h-full rounded-tl-2xl absolute top-0 left-0" />
+                <motion.div className="absolute top-0 left-0 w-24 h-24" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}>
+                    <div className="animated-corner h-[4px] w-full rounded-tl-2xl" />
+                    <div className="animated-corner w-[4px] h-full rounded-tl-2xl absolute top-0 left-0" />
                 </motion.div>
 
-                <motion.div
-                className="absolute top-0 right-0 w-24 h-24"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                >
-                <div className="animated-corner h-[4px] w-full rounded-tr-2xl" />
-                <div className="animated-corner w-[4px] h-full rounded-tr-2xl absolute top-0 right-0" />
+                <motion.div className="absolute top-0 right-0 w-24 h-24" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}>
+                    <div className="animated-corner h-[4px] w-full rounded-tr-2xl" />
+                    <div className="animated-corner w-[4px] h-full rounded-tr-2xl absolute top-0 right-0" />
                 </motion.div>
 
-                <motion.div
-                className="absolute bottom-0 left-0 w-24 h-24"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                >
-                <div className="animated-corner h-[4px] w-full absolute bottom-0 left-0 rounded-bl-2xl" />
-                <div className="animated-corner w-[4px] h-full rounded-bl-2xl absolute top-0 left-0" />
+                <motion.div className="absolute bottom-0 left-0 w-24 h-24" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}>
+                    <div className="animated-corner h-[4px] w-full absolute bottom-0 left-0 rounded-bl-2xl" />
+                    <div className="animated-corner w-[4px] h-full rounded-bl-2xl absolute top-0 left-0" />
                 </motion.div>
 
-                <motion.div
-                className="absolute bottom-0 right-0 w-24 h-24"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-                >
-                <div className="animated-corner h-[4px] w-full absolute bottom-0 right-0 rounded-br-2xl" />
-                <div className="animated-corner w-[4px] h-full rounded-br-2xl absolute top-0 right-0" />
+                <motion.div className="absolute bottom-0 right-0 w-24 h-24" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}>
+                    <div className="animated-corner h-[4px] w-full absolute bottom-0 right-0 rounded-br-2xl" />
+                    <div className="animated-corner w-[4px] h-full rounded-br-2xl absolute top-0 right-0" />
                 </motion.div>
-
-
 
                 <div className="text-center m-10 sm:m-12 md:m-16 lg:m-20">
-                    <motion.p
-                        initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
-                        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+                    <TypeAnimation
+                        sequence={['Welcome to', 2000, '', 500]}
+                        speed={50}
+                        wrapper="span"
+                        repeat={Infinity}
                         className='text-transparent text-4xl sm:text-5xl md:text-6xl font-extrabold bg-clip-text 
-                            bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] inline-block'>
-                        Welcome to
-                    </motion.p>
+                            bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] inline-block'
+                    />
 
                     <motion.div
                         ref={containerRef}
                         style={{ x: springX, y: springY }}
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.5, ease: "easeOut",delay : 0.2 }}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
                         className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6'>
                         <motion.img
                             src={logo}
@@ -137,7 +109,7 @@ function Intro() {
                         <motion.h1
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                            transition={{ duration: 0.5, ease: "easeOut" , delay : 0.3}}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
                             whileHover={{ scale: 1.05 }}
                             className='text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold'>
                             DevNexus
@@ -147,7 +119,7 @@ function Intro() {
                     <motion.p
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.5, ease: "easeOut" , delay : 0.4 }}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
                         className='text-transparent text-xl sm:text-2xl font-extrabold bg-clip-text 
                             bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2]
                             inline-block border-b-2 border-gray-600 mt-20 sm:mt-32'>
@@ -157,9 +129,7 @@ function Intro() {
             </section>
 
             <section className='relative flex flex-col justify-center p-8'>
-                <div
-                    className='relative flex flex-col p-16 gap-6 items-center 
-                        justify-center text-center -mb-25'>
+                <div className='relative flex flex-col p-16 gap-6 items-center justify-center text-center -mb-25'>
                     <motion.img
                         src={group}
                         alt="group"
@@ -179,7 +149,7 @@ function Intro() {
                     <motion.p
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.4 }}
+                        transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.3 }}
                         className='team-intro-text text-white text-base font-medium'>
                         We are a team of passionate and innovative web developers committed to delivering high-quality,
                         scalable, and efficient digital solutions. With a strong foundation in both front-end and back-end
@@ -193,7 +163,7 @@ function Intro() {
                     px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-16 xl:px-16 xl:py-20 
                     gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 
                     text-sm sm:text-base xl:text-lg">
-                    
+
                     <motion.div
                         initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -210,7 +180,6 @@ function Intro() {
                         <Principle1 />
                     </motion.div>
                 </div>
-
             </section>
 
             <hr className='text-gray-600' />

@@ -152,9 +152,9 @@ function Profilepage() {
             name: "Dhaniel, Lofamia",
             profileImg: profileImg,
             age: 25,
-            birthdate: "Jan 1, 2000",
+            birthdate: "Oct 24, 2002",
             phone: "0912-345-6789",
-            email: "dhaniel@example.com",
+            email: "dhanieeel0907@gmail.com",
             socialIcons: [
                 { Icon: FaFacebook, color: "#1877F2" },   // Facebook Blue
                 { Icon: FaInstagram, color: "#E1306C" },  // Instagram Pink
@@ -567,7 +567,7 @@ function Profilepage() {
                                         <motion.div
                                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
+                                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.650 }}
                                             className="grid grid-cols-2 text-sm md:text-base text-white mt-2 md:mt-4 translate-y-2 md:translate-y-5">
                                             <p className="font-semibold">Age:</p>
                                             <p>{member.age}</p>
@@ -585,7 +585,7 @@ function Profilepage() {
                                         <motion.h4
                                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
+                                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
                                             className="text-xl mb-4">Work Process</motion.h4>
                                         <div className="grid grid-cols-3 gap-y-3 gap-x-3 text-1xl place-items-center">
                                             {member.workProcess.map((item, idx) => {
@@ -620,7 +620,7 @@ function Profilepage() {
                                         <div className="grid grid-cols-4 gap-1 text-xl md:text-2xl translate-y-2 md:translate-y-5 place-items-center">
                                             {member.interests.map((item, idx) => {
                                                 const Icon = item.icon;
-                                                const baseDelay = member.socialIcons.length * 0.4;
+                                                const baseDelay = member.socialIcons.length * 0.2;
                                                 return (
                                                     <motion.div
                                                         key={idx}
@@ -654,12 +654,12 @@ function Profilepage() {
                                         <motion.p
                                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+                                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.750 }}
                                             className="mb-3 md:mb-4 text-gray-300 items-center text-center text-sm md:text-base px-2">Experienced in designing intuitive and user-friendly interfaces that enhance digital experiences and support seamless interaction.</motion.p>
                                         <div className="flex flex-wrap gap-3 md:gap-6 justify-center items-center text-2xl md:text-3xl mt-2 md:mt-4">
                                             {member.skills.map((item, idx) => {
                                                 const Icon = item.icon;
-                                                const baseDelay = member.socialIcons.length * 0.5;
+                                                const baseDelay = member.socialIcons.length * 0.2;
                                                 return (
                                                     <motion.div
                                                         key={idx}
@@ -682,7 +682,7 @@ function Profilepage() {
                                         <motion.h4
                                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+                                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
                                             className="text-xl md:text-2xl font-bold mb-2 flex items-center justify-center gap-2">
                                             <GradientBullet />
                                             UI/UX Design
@@ -690,12 +690,12 @@ function Profilepage() {
                                         <motion.p
                                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }} className="mb-3 md:mb-4 text-gray-300 text-center px-2 text-sm md:text-base">Designing intuitive, user-friendly interfaces to improve digital experiences and create seamless interactions.</motion.p>
+                                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.750 }} className="mb-3 md:mb-4 text-gray-300 text-center px-2 text-sm md:text-base">Designing intuitive, user-friendly interfaces to improve digital experiences and create seamless interactions.</motion.p>
                                         <div className="flex gap-4 md:gap-6 justify-center text-2xl md:text-3xl">
                                             <div className="flex gap-4 md:gap-6 justify-center text-2xl md:text-3xl">
                                                 {member.uiUxDesign.map((item, idx) => {
                                                     const Icon = item.icon;
-                                                    const baseDelay = member.socialIcons.length * 0.6;
+                                                    const baseDelay = member.socialIcons.length * 0.4;
                                                     return (
                                                         <motion.div
                                                             key={idx}
