@@ -32,7 +32,7 @@ function ProjectPage () {
               </div>
             </div>
             
-            <div className='flex flex-col gap-26 my-14'>
+            <div className='flex flex-col gap-16 sm:gap-26 my-14'>
                       <ProjectDiv 
                           ProjectImg={Scholarship}
                           ProjectTitle="Scholarship Management System"
