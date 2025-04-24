@@ -328,9 +328,9 @@ function Profilepage() {
             name: "Rodney, Santos",
             profileImg: profileImg4,
             age: 25,
-            birthdate: "Jan 1, 2000",
-            phone: "0912-345-6789",
-            email: "rodney@example.com",
+            birthdate: "July 22, 2002 ",
+            phone: "09924210601",
+            email: "rodneyysantos22@gmail.com",
             socialIcons: [
                 { Icon: FaFacebook, color: "#1877F2" },   // Facebook Blue
                 { Icon: FaInstagram, color: "#E1306C" },  // Instagram Pink
