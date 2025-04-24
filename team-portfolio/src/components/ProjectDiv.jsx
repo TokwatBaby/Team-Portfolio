@@ -22,7 +22,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
 
     return (
         <motion.div
-            className="grid 2xl:grid-cols-2 lg:grid-cols-1 gap-10"
+            className="grid 2xl:grid-cols-2 lg:grid-cols-1 gap-10 px-8 sm:px-4"
             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ ...transitionSettings, delay: isMobile ? 0 : 0.1 }}
