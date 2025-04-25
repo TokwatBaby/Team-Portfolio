@@ -45,16 +45,16 @@ function Contact () {
                 </div>
 
                 <div className='grid grid-cols-2 gap-6 w-3xl bg-clip-text '>
-                    <div className="h-full">
+                    <div className="w-full">
                         <Input label='Name' />
                     </div>
-                    <div className="h-full">
+                    <div className="w-full">
                         <Input label='Email' />
                     </div>
-                    <div className="col-span-2 h-full">
+                    <div className="col-span-2 w-full">
                         <Input label='Subject' />
                     </div>
-                    <div className="col-span-2 h-full">
+                    <div className="col-span-2 w-full">
                         <Input label='Message' textarea/>
                     </div>
                     <div className='col-span-2 h-full text-end bg-clip-text'>

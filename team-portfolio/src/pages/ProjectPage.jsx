@@ -18,19 +18,21 @@ function ProjectPage () {
 
           <section className="relative flex flex-col gap-y-10">
             
-            <div className='flex flex-row items-center gap-x-4 text-white'>
-                <img src={logo} alt="logo" className='h-14 w-14' />
-                <h1 className='text-4xl font-semibold'>DevNexus</h1>
-            </div>
-            
-            <div className='bg-[linear-gradient(to_bottom,_#00FFFF,_#8A2BE2)] pl-1'>
-              <div className='flex flex-col gap-y-4 text-white bg-[#0D0D0D] pl-4'>
-                  <h1 className='text-5xl font-semibold'>PROJECTS</h1>
-                  <span>Our Collection of Projects</span>
+            <div className='flex flex-col gap-10 px-8 sm:px-4 pt-8 sm:pt-8'>
+              <div className='flex flex-row items-center gap-x-4 text-white'>
+                  <img src={logo} alt="logo" className='h-14 w-14' />
+                  <h1 className='text-4xl font-semibold'>DevNexus</h1>
+              </div>
+              
+              <div className='bg-[linear-gradient(to_bottom,_#00FFFF,_#8A2BE2)] pl-1'>
+                <div className='flex flex-col gap-y-4 text-white bg-[#0D0D0D] pl-4'>
+                    <h1 className='text-5xl font-semibold'>PROJECTS</h1>
+                    <span>Our Collection of Projects</span>
+                </div>
               </div>
             </div>
             
-            <div className='flex flex-col gap-26 my-14'>
+            <div className='flex flex-col gap-16 sm:gap-26 my-14'>
                       <ProjectDiv 
                           ProjectImg={Scholarship}
                           ProjectTitle="Scholarship Management System"

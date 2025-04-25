@@ -22,7 +22,7 @@ function AboutUs() {
     }, []);
     
     return (
-        <div className="items-center bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)]">
+        <div className="items-center bg-[linear-gradient(to_top,_#0D0D0D,_#1E1E1E)]">
             <motion.div
                 initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}

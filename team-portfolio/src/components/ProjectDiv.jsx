@@ -22,7 +22,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
 
     return (
         <motion.div
-            className="grid 2xl:grid-cols-2 lg:grid-cols-1 gap-10"
+            className="grid 2xl:grid-cols-2 lg:grid-cols-1 gap-10 px-8 sm:px-4"
             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ ...transitionSettings, delay: isMobile ? 0 : 0.1 }}
@@ -49,7 +49,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
 
             {/* Text & Tech Stack Section */}
             <motion.div
-                className="flex flex-col text-white gap-8 py-6"
+                className="flex flex-col text-white gap-8"
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ ...transitionSettings, delay: isMobile ? 0 : 0.1 }}
@@ -57,7 +57,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
             >
                 {/* Title */}
                 <motion.h2
-                    className="text-3xl font-semibold"
+                    className="text-xl sm:text-4xl font-semibold"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ ...transitionSettings, delay: isMobile ? 0 : 0.1 }}
@@ -68,7 +68,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
 
                 {/* Description */}
                 <motion.p
-                    className="text-1xl opacity-50"
+                    className="text-base sm:text-xl text-gray-400"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ ...transitionSettings, delay: isMobile ? 0 : 0.1 }}
@@ -80,21 +80,21 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
                 {/* Tech Stack - now delayed after description */}
                 <div className="flex flex-wrap gap-2">
                     {[{
-                        icon: <FaHtml5 color="#FF5733" size={30} />, label: "HTML"
+                        icon: <FaHtml5 color="#FF5733" size={25} />, label: "HTML"
                     }, {
-                        icon: <FaCss3 color="#00A8E1" size={30} />, label: "CSS"
+                        icon: <FaCss3 color="#00A8E1" size={25} />, label: "CSS"
                     }, {
-                        icon: <FaJs color="#F7DF1E" size={30} />, label: "JavaScript"
+                        icon: <FaJs color="#F7DF1E" size={25} />, label: "JavaScript"
                     }, {
-                        icon: <FaBootstrap color="#563D7C" size={30} />, label: "Bootstrap"
+                        icon: <FaBootstrap color="#563D7C" size={25} />, label: "Bootstrap"
                     }, {
-                        icon: <FaDatabase color="#8A2BE2" size={30} />, label: "MySQL"
+                        icon: <FaDatabase color="#8A2BE2" size={25} />, label: "MySQL"
                     }, {
-                        icon: <FaPhp color="#4F5B93" size={30} />, label: "PHP"
+                        icon: <FaPhp color="#4F5B93" size={25} />, label: "PHP"
                     }].map(({ icon, label }, idx) => (
                         <motion.div
                             key={label}
-                            className="flex items-center justify-center border-white border-2 rounded-4xl p-3 gap-1"
+                            className="flex items-center justify-center border-white border-2 rounded-4xl p-2 gap-1"
                             whileHover={{ scale: 1.05 }}
                             transition={{
                                 ease: "easeOut",
@@ -112,9 +112,9 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
                 </div>
 
                 {/* Button */}
-                <a href={href} className="bg-[linear-gradient(to_right,_#2E2E2E,_#3A3A3A)] rounded w-fit px-4">
+                <a href={href} className="bg-[linear-gradient(to_right,_#2E2E2E,_#3A3A3A)] rounded w-fit px-3">
                     <motion.button
-                        className="text-start text-lg text-transparent bg-[#FFFFFF] bg-clip-text font-bold py-4 
+                        className="text-start text-lg text-transparent bg-[#FFFFFF] bg-clip-text font-bold py-3 
                                    hover:bg-[linear-gradient(to_right,_#00FFFF,_#00A3FF)] transition duration-300 ease-in-out"
                         whileHover={{ scale: 1.05 }}
                         transition={{ ease: "easeOut" }}

@@ -14,8 +14,8 @@ const ProjectContainer = ({ProjectImg, ProjectTitle, ProjectDesc}) => {
                 />
             </div>
     
-            <h2 className="text-xl font-semibold">{ProjectTitle}</h2>
-            <p className="text-gray-300">{ProjectDesc}</p>
+            <h2>{ProjectTitle}</h2>
+            <p>{ProjectDesc}</p>
     
             <div className="flex flex-wrap gap-2">
                 <FaHtml5 color="#FF5733" size={25} />

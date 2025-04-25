@@ -14,18 +14,17 @@ function Header() {
     return (
         <header className="flex justify-center fixed bottom-10 w-full z-50 bg-transparent">
             <nav>
-                <ul className="flex justify-center space-x-10 p-[15px] w-90 rounded-full text-white 
-                            bg-[linear-gradient(to_bottom,_rgba(51,51,51,0.75),_rgba(37,37,37,0.75))]">
+                <ul className="flex justify-center space-x-6 sm:space-x-10 p-[8px] sm:p-[15px] w-50 sm:w-90 rounded-full 
+                             text-white bg-[linear-gradient(to_bottom,_rgba(51,51,51,0.75),_rgba(37,37,37,0.75))]">
                     {navItems.map(({ icon: Icon, label, to }, index) => {
                         const isActive = location.pathname === to;
 
                         return (
                             <li key={index}>
                                 <NavLink to={to} className="group relative inline-block">
-                                    <Icon
-                                        size={30}
+                                    <Icon       
                                         strokeWidth={3}
-                                        className={`fill-transparent transition-colors duration-300 ${
+                                        className={`fill-transparent transition-colors duration-300 w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] ${
                                             isActive
                                                 ? "stroke-[url(#gradient)]"
                                                 : "stroke-white group-hover:stroke-[url(#gradient)]"
