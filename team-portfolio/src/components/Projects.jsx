@@ -52,27 +52,19 @@ function Projects() {
         <section className="text-white py-16 px-10 relative overflow-hidden bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)]">
             {/* Title Block */}
             <div className="relative w-full border-t-4 border-gray-700 min-h-[20rem] flex items-center justify-center mb-20">
-                <motion.div
-                    initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
-                    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none"
+                <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none"
                 >
                     <h1 className="projects-text absolute top-14 left-1/2 -translate-x-1/2 text-white 
                         opacity-4 text-[140px] font-extrabold z-0 scale-200">
                         PROJECTS
                     </h1>
-                </motion.div>
+                </div>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
-                    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                    transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.4 }}
-                    className="projects-colored-text text-transparent text-5xl font-extrabold bg-clip-text 
+                <p className="projects-colored-text text-transparent text-5xl font-extrabold bg-clip-text 
                         bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] inline-block"
                 >
                     PROJECTS
-                </motion.p>
+                </p>
             </div>
 
             {/* Projects Grid */}
