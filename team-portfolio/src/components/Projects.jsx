@@ -116,12 +116,8 @@ function Projects() {
                 </motion.p>
             </div>
 
-            {/* Projects Grid */}
-<<<<<<< HEAD
+            {/* Projects Grid */
             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-16 relative z-10">
-=======
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-20 relative z-10">
->>>>>>> a07839a17c6bf21782f3c3fee3b27381c46ded8a
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
@@ -148,13 +144,6 @@ function Projects() {
                                 <div className="relative transition-all duration-300">
                                     <div className="p-[3px] rounded-xl bg-black transition-all duration-200 group-hover:bg-gradient-to-br group-hover:from-cyan-400 group-hover:to-purple-600 bg-[position:100%_100%] bg-no-repeat bg-[length:200%_200%]">
                                         <div className="bg-black rounded-xl overflow-hidden">
-<<<<<<< HEAD
-                                            <img
-                                                src={project.image}
-                                                alt={`Project ${index}`}
-                                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.01]"
-                                            />
-=======
                                             {project.type === "video" ? (
                                                 <video
                                                     src={project.media}
@@ -171,7 +160,6 @@ function Projects() {
                                                     className="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-[1.01]"
                                                 />
                                             )}
->>>>>>> a07839a17c6bf21782f3c3fee3b27381c46ded8a
                                         </div>
                                     </div>
                                 </div>
