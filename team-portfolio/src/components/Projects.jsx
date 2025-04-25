@@ -92,7 +92,7 @@ function Projects() {
     return (
         <section className="text-white py-16 px-10 relative overflow-hidden bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)]">
             {/* Title Block */}
-            <div className="relative w-full border-t-4 border-gray-700 min-h-[20rem] flex items-center justify-center mb-20">
+            <div className="relative w-full border-t-1 border-gray-700 min-h-[20rem] flex items-center justify-center mb-20">
                 <motion.div
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}

@@ -32,13 +32,15 @@ function Team() {
                         2xl:p-20
                         bg-[linear-gradient(to_top,_#0D0D0D,_#1E1E1E)]">
 
-<           div className="absolute top-14 left-1/2 -translate-x-1/2">
+            <hr className='text-gray-600'/>
+
+            <div className="absolute top-24 left-1/2 -translate-x-1/2">
                 <h1 className="members-text text-white opacity-4 text-[140px] font-extrabold z-0 scale-200">
                     MEMBERS
                 </h1>
             </div>
 
-            <div className="relative w-11/12 md:w-3/4 mx-auto border-t-4 text-gray-600 min-h-[30rem] flex items-start justify-center pt-20 bg-clip-text">
+            <div className="relative w-11/12 md:w-3/4 mx-auto text-gray-600 min-h-[30rem] flex items-start justify-center pt-20 bg-clip-text">
 
                 <section className="relative flex flex-col justify-center items-center p-8 bg-clip-text">
 
