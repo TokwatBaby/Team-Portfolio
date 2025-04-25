@@ -116,7 +116,7 @@ function Projects() {
                 </motion.p>
             </div>
 
-            {/* Projects Grid */
+            {/* Projects Grid */}
             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-16 relative z-10">
                 {projects.map((project, index) => (
                     <motion.div
