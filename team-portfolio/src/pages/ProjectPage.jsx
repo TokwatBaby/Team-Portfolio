@@ -4,7 +4,7 @@ import logo from '../assets/logo.png'
 import Payroll from "../assets/Expensa.png";
 import Scholarship from "../assets/Scholarship.png";
 import Alumni from "../assets/Alumni.png";
-import Inventory from "../assets/inventory.png";
+import Inventory from "../assets/Inventory.png";
 import Barangay from "../assets/Barangay.png";
 import Instagram from "../assets/Instagram.png";
 import Tiktok from "../assets/tiktok.png";
