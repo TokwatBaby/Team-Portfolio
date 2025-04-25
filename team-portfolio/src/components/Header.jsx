@@ -10,7 +10,7 @@ function Header() {
         { icon: Layers, label: "Projects", to: "/ProjectPage" },
         { icon: ContactRound, label: "Contact", to: "/ContactPage" },
     ];
-
+    // asd
     return (
         <header className="flex justify-center fixed bottom-10 w-full z-50 bg-transparent">
             <nav>
