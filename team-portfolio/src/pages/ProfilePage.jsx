@@ -21,13 +21,8 @@ import profileImg from "../assets/dhanielstix.png";
 import profileImg1 from "../assets/jaystix.png";
 import profileImg2 from "../assets/jpstix.png";
 import profileImg3 from "../assets/nixstix.png";
-<<<<<<< HEAD
 import profileImg4 from "../assets/nice.png";
 import Footer from '../components/Footer'
-=======
-import profileImg4 from "../assets/rodstix.png";
-
->>>>>>> a07839a17c6bf21782f3c3fee3b27381c46ded8a
 
 function GradientBullet() {
     return (
