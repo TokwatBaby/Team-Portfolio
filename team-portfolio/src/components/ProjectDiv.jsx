@@ -41,7 +41,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
                     className="rounded-xl w-full"
                     whileHover={{
                         scale: 1.05,
-                        boxShadow: "0px 15px 30px rgba(0, 255, 255, 0.4)",
+                        boxShadow: "0px 5px 10px 3px rgba(0, 255, 255, 0.4)",
                     }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 />
@@ -49,7 +49,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
 
             {/* Text & Tech Stack Section */}
             <motion.div
-                className="flex flex-col text-white gap-8"
+                className="flex flex-col text-white gap-5"
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ ...transitionSettings, delay: isMobile ? 0 : 0.1 }}
@@ -57,7 +57,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
             >
                 {/* Title */}
                 <motion.h2
-                    className="text-xl sm:text-4xl font-semibold"
+                    className="text-xl sm:text-2xl font-semibold"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ ...transitionSettings, delay: isMobile ? 0 : 0.1 }}
@@ -68,7 +68,7 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
 
                 {/* Description */}
                 <motion.p
-                    className="text-base sm:text-xl text-gray-400"
+                    className="text-base text-gray-400"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ ...transitionSettings, delay: isMobile ? 0 : 0.1 }}
@@ -112,9 +112,9 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
                 </div>
 
                 {/* Button */}
-                <a href={href} className="bg-[linear-gradient(to_right,_#2E2E2E,_#3A3A3A)] rounded w-fit px-3">
+                <a href={href} className="bg-[linear-gradient(to_right,_#2E2E2E,_#3A3A3A)] rounded w-fit px-2">
                     <motion.button
-                        className="text-start text-lg text-transparent bg-[#FFFFFF] bg-clip-text font-bold py-3 
+                        className="text-start text-base text-transparent bg-[#FFFFFF] bg-clip-text font-bold py-2 
                                    hover:bg-[linear-gradient(to_right,_#00FFFF,_#00A3FF)] transition duration-300 ease-in-out"
                         whileHover={{ scale: 1.05 }}
                         transition={{ ease: "easeOut" }}

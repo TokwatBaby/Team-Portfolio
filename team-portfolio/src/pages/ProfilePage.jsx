@@ -22,7 +22,7 @@ import profileImg1 from "../assets/jaystix.png";
 import profileImg2 from "../assets/jpstix.png";
 import profileImg3 from "../assets/nixstix.png";
 import profileImg4 from "../assets/nice.png";
-
+import Footer from '../components/Footer'
 
 function GradientBullet() {
     return (
@@ -387,6 +387,8 @@ function Profilepage() {
 
 
     return (
+
+        <>
         <div className="min-h-screen text-white px-4 sm:px-6 md:px-10 py-6 space-y-8 relative bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)]">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 relative">
 
@@ -757,6 +759,9 @@ function Profilepage() {
                 </div>
             </div>
         </div >
+
+        <Footer />
+        </>
     );
 }
 

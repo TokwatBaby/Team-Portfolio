@@ -68,7 +68,7 @@ function Projects() {
             </div>
 
             {/* Projects Grid */}
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-20 relative z-10">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-16 relative z-10">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
@@ -98,7 +98,7 @@ function Projects() {
                                             <img
                                                 src={project.image}
                                                 alt={`Project ${index}`}
-                                                className="w-full h-auto md:h-[300px] object-cover transition-transform duration-300 group-hover:scale-[1.01]"
+                                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.01]"
                                             />
                                         </div>
                                     </div>

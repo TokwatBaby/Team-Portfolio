@@ -91,7 +91,7 @@ function ContactPage() {
                             href="#"><img src={x} alt="x" className='w-10 md:w-14 h-10 md:h-14' /></motion.a>
                     </div>
 
-                    <div className='grid grid-cols-2 gap-4 sm:gap-6 w-3xl bg-clip-text px-16 sm:px-10 md:px-6 lg:px-0'>
+                    <div className='grid grid-cols-2 gap-4 sm:gap-6 w-3xl bg-clip-text px-16 sm:px-40 md:px-20 lg:px-0'>
                         <motion.div
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
