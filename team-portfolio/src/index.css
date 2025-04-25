@@ -381,3 +381,45 @@ body {
     grid-row: auto;
   }
 }
+
+@keyframes fadeInSlow {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-slow {
+  animation: fadeInSlow 1.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  50% { opacity: 1; transform: translateX(0); }
+}
+.slide-in-left {
+  animation: slideInLeft 5s ease-out forwards;
+}
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  width: 0;
+  animation: typing 2s steps(30, end) forwards, blink 0.50s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0% { border-color: transparent; }
+}
+
+@keyframes zoomIn {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.zoom-in {
+  animation: zoomIn 1s ease-out forwards;
+}

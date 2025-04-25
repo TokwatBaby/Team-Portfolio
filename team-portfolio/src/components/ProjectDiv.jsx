@@ -110,18 +110,6 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
                         </motion.div>
                     ))}
                 </div>
-
-                {/* Button */}
-                <a href={href} className="bg-[linear-gradient(to_right,_#2E2E2E,_#3A3A3A)] rounded w-fit px-2">
-                    <motion.button
-                        className="text-start text-base text-transparent bg-[#FFFFFF] bg-clip-text font-bold py-2 
-                                   hover:bg-[linear-gradient(to_right,_#00FFFF,_#00A3FF)] transition duration-300 ease-in-out"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ ease: "easeOut" }}
-                    >
-                        Watch Demo →
-                    </motion.button>
-                </a>
             </motion.div>
         </motion.div>
     );
