@@ -28,7 +28,7 @@ function ContactPage() {
 
         <>
 
-            <main className="relative flex flex-col justify-center
+            <main className="relative flex flex-col justify-center min-h-screen
                         2xl:p-20
                         bg-[linear-gradient(to_top,_#0D0D0D,_#1E1E1E)]">
 
