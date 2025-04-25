@@ -68,7 +68,7 @@ function Projects() {
             </div>
 
             {/* Projects Grid */}
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-20 relative z-10">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-20 relative z-10">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
@@ -93,28 +93,28 @@ function Projects() {
                         <div className="flex flex-col w-full pl-4">
                             <div className="group project-image-container relative">
                                 <div className="relative transition-all duration-300">
-                                    <div className="p-[3px] rounded-xl bg-black transition-all duration-200 group-hover:bg-gradient-to-br group-hover:from-cyan-400 group-hover:to-purple-600 bg-[position:100%_100%] bg-no-repeat bg-[length:200%_200%]">
+                                    <div className="p-[2px] rounded-lg bg-black transition-all duration-200 group-hover:bg-gradient-to-br group-hover:from-cyan-400 group-hover:to-purple-600 bg-[position:100%_100%] bg-no-repeat bg-[length:200%_200%]">
                                         <div className="bg-black rounded-xl overflow-hidden">
                                             <img
                                                 src={project.image}
                                                 alt={`Project ${index}`}
-                                                className="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-[1.01]"
+                                                className="w-full h-auto md:h-[300px] object-cover transition-transform duration-300 group-hover:scale-[1.01]"
                                             />
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Description */}
-                                <div className="z-index project-description mt-4">
-                                    <strong>
+                                <div className="z-index project-description flex flex-col space-y-1 md:space-y-2">
+                                    <strong className="flex text-start text-[12px] md:text-xl">
                                         {index === 0 && "Payroll Management System"}
                                         {index === 1 && "Scholarship Management System"}
                                         {index === 2 && "Alumni Management System"}
                                         {index === 3 && "Inventory Management System"}
                                     </strong>
-                                    <br />
-                                    <br />
-                                    {project.description}
+                                    <p className="flex text-start text-[9px] md:text-sm">
+                                        {project.description}
+                                    </p>
                                 </div>
                             </div>
                         </div>

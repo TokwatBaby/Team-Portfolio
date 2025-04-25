@@ -30,8 +30,7 @@ function ContactPage() {
                         2xl:p-20
                         bg-[linear-gradient(to_top,_#0D0D0D,_#1E1E1E)]">
 
-                <div className="absolute top-14 left-1/2 -translate-x-1/2 "
-                >
+                <div className="absolute top-14 left-1/2 -translate-x-1/2 ">
                     <h1 className="contact-text text-white opacity-4 text-[140px] font-extrabold z-0 scale-200">
                         CONTACT
                     </h1>
@@ -74,25 +73,25 @@ function ContactPage() {
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.3 }}
-                            href="#"><img src={facebook} alt="facebook" className='w-11 md:w-14 h-11 md:h-14' /></motion.a>
+                            href="#"><img src={facebook} alt="facebook" className='w-10 md:w-14 h-10 md:h-14' /></motion.a>
                         <motion.a
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.4 }}
-                            href="#"><img src={linkedin} alt="linkedin" className='w-11 md:w-14 h-11 md:h-14' /></motion.a>
+                            href="#"><img src={linkedin} alt="linkedin" className='w-10 md:w-14 h-10 md:h-14' /></motion.a>
                         <motion.a
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.5 }}
-                            href="#"><img src={github} alt="github" className='w-11 md:w-14 h-11 md:h-14' /></motion.a>
+                            href="#"><img src={github} alt="github" className='w-10 md:w-14 h-10 md:h-14' /></motion.a>
                         <motion.a
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.6 }}
-                            href="#"><img src={x} alt="x" className='w-11 md:w-14 h-11 md:h-14' /></motion.a>
+                            href="#"><img src={x} alt="x" className='w-10 md:w-14 h-10 md:h-14' /></motion.a>
                     </div>
 
-                    <div className='grid grid-cols-2 gap-6 w-3xl bg-clip-text px-14 sm:px-10 md:px-6 lg:px-0'>
+                    <div className='grid grid-cols-2 gap-4 sm:gap-6 w-3xl bg-clip-text px-16 sm:px-10 md:px-6 lg:px-0'>
                         <motion.div
                             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -126,7 +125,7 @@ function ContactPage() {
                             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                             transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.6 }}
                             className='col-span-2 h-full text-center md:text-end bg-clip-text'>
-                            <button className='px-5 py-2 text-[#6E6E6E] font-bold text-lg
+                            <button className='px-4 py-1 sm:px-5 sm:py-2 text-[#6E6E6E] font-bold text-lg
                                         bg-[linear-gradient(to_right,_#2E2E2E,_#3A3A3A)]
                                         hover:bg-[linear-gradient(to_right,_#00FFFF,_#00A3FF)]
                                         hover:text-white transition-all duration-100'>

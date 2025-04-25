@@ -161,7 +161,7 @@ function Intro() {
 
                 <div className="relative flex flex-col xl:flex-row justify-center items-center 
                     px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-16 xl:px-16 xl:py-20 
-                    gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 
+                    sm:gap-10 md:gap-12 lg:gap-14 xl:gap-16 
                     text-sm sm:text-base xl:text-lg">
 
                     <motion.div

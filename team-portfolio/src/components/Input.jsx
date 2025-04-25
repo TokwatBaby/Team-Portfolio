@@ -14,7 +14,7 @@ const Input = ({label, textarea = false}) => {
             ) : (
                 
                 <input type='text' id='placeholder' required
-                    className='peer w-full h-9 md:h-10 bg-[linear-gradient(to_right,_#2E2E2E,_#3A3A3A)]
+                    className='peer w-full h-8 md:h-10 bg-[linear-gradient(to_right,_#2E2E2E,_#3A3A3A)]
                                 px-4 py-3 text-white text-sm border-b-3 border-[#494848]
                                 focus:outline-none transition-all duration 100 '
                 />
@@ -27,7 +27,7 @@ const Input = ({label, textarea = false}) => {
                             transition-opacity duration-300 pointer-events-none " />
 
             <label for='placeholder'
-                    className='absolute top-1 left-3 text-[#6E6E6E] font-bold text-base md:text-lg
+                    className='absolute top-1 left-3 text-[#6E6E6E] font-bold text-sm sm:text-lg
                             peer-focus:top-[-12px] peer-focus:text-base peer-focus:text-transparent
                             peer-focus:bg-[linear-gradient(to_right,_#00FFFF,_#00A3FF)]
                             peer-focus:bg-clip-text peer-valid:top-[-12px] peer-valid:text-base
