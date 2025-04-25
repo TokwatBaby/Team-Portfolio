@@ -23,16 +23,7 @@ function AboutUs() {
     
     return (
         <div className="items-center bg-[linear-gradient(to_top,_#0D0D0D,_#1E1E1E)]">
-<<<<<<< HEAD
-            <motion.div
-                initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
-                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: isMobile ? 0 : 0.3 }}
-                className="relative w-full max-w-6xl mx-auto min-h-[30rem] flex items-start justify-center pt-20 bg-clip-text px-4"
-=======
-            <div className="relative w-full max-w-6xl mx-auto min-h-[30rem] flex items-start justify-center pt-20 bg-clip-text px-4"
->>>>>>> 3fd99acb835e8d77b90a818920877d3d6838a0a8
-            >
+            <div className="relative w-full max-w-6xl mx-auto min-h-[30rem] flex items-start justify-center pt-20 bg-clip-text px-4">
                 <div>
                     <h1 className="career-us-text absolute top-14 left-1/2 -translate-x-1/2 text-white opacity-10 text-[140px] font-extrabold z-0 scale-200">
                         CAREER

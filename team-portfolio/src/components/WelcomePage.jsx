@@ -64,7 +64,7 @@ function WelcomePage() {
           transition={{ duration: 0.8, delay: 1 }}
           className="flex flex-col items-center mt-4 sm:mt-8"
         >
-          <p className="text-lg sm:text-xl md:text-2xl text-transparent text-5xl font-bold bg-clip-text 
+          <p className="sm:text-xl md:text-2xl text-transparent text-5xl font-bold bg-clip-text 
                                 bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] inline-block">
             A team composed of web developers
           </p>
