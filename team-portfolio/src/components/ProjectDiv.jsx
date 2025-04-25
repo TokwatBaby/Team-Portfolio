@@ -2,7 +2,24 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaHtml5, FaCss3, FaJs, FaPhp, FaBootstrap, FaDatabase } from "react-icons/fa";
 
-const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
+const ICONS = {
+    HTML: { icon: <FaHtml5 size={20} />, label: "HTML" },
+    CSS: { icon: <FaCss3 size={20} />, label: "CSS" },
+    JavaScript: { icon: <FaJs size={20} />, label: "JavaScript" },
+    Bootstrap: { icon: <FaBootstrap size={20} />, label: "Bootstrap" },
+    MySQL: { icon: <FaDatabase size={20} />, label: "MySQL" },
+    PHP: { icon: <FaPhp size={20} />, label: "PHP" },
+};
+
+const TECH_STACKS = {
+    "Barangay Management System": ["HTML", "CSS"],
+    "Espresso Markup Squad": ["HTML", "CSS"],
+    "Tiktok": ["HTML", "CSS"],
+    "Instagram": ["HTML", "CSS"],
+    "Alumni Management System": ["HTML", "CSS", "JavaScript", "Bootstrap", "MySQL", "PHP"],
+};
+
+const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href, technologies }) => {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -19,6 +36,11 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
         duration: 0.5,
         ease: "easeOut",
     };
+
+    const defaultStack = ["HTML", "CSS", "JavaScript", "Bootstrap", "MySQL", "PHP"];
+    const techKeys = TECH_STACKS[ProjectTitle] || defaultStack;
+    const filteredTechStack = techKeys.map((key) => ICONS[key]);
+
 
     return (
         <motion.div
@@ -79,36 +101,30 @@ const ProjectDiv = ({ ProjectImg, ProjectTitle, ProjectDesc, href }) => {
 
                 {/* Tech Stack - now delayed after description */}
                 <div className="flex flex-wrap gap-2">
-                    {[{
-                        icon: <FaHtml5 color="#FF5733" size={25} />, label: "HTML"
-                    }, {
-                        icon: <FaCss3 color="#00A8E1" size={25} />, label: "CSS"
-                    }, {
-                        icon: <FaJs color="#F7DF1E" size={25} />, label: "JavaScript"
-                    }, {
-                        icon: <FaBootstrap color="#563D7C" size={25} />, label: "Bootstrap"
-                    }, {
-                        icon: <FaDatabase color="#8A2BE2" size={25} />, label: "MySQL"
-                    }, {
-                        icon: <FaPhp color="#4F5B93" size={25} />, label: "PHP"
-                    }].map(({ icon, label }, idx) => (
-                        <motion.div
-                            key={label}
-                            className="flex items-center justify-center border-white border-2 rounded-4xl p-2 gap-1"
-                            whileHover={{ scale: 1.05 }}
-                            transition={{
-                                ease: "easeOut",
-                                duration: 0.3,
-                                delay: isMobile ? 0 : 0.2 + idx * 0.1,
-                            }}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false, amount: 0.2 }}
-                        >
-                            {icon}
-                            <p className="text-base font-medium">{label}</p>
-                        </motion.div>
-                    ))}
+                    {filteredTechStack.map((tech, idx) => {
+                        const techItem = Array.isArray(tech) 
+                            ? { icon: tech[0], label: tech[1], className: tech[2] }
+                            : tech;
+                            
+                        return (
+                            <motion.div
+                                key={techItem.label}
+                                className={`flex items-center justify-center border-white border-2 rounded-4xl p-2 gap-1`}
+                                whileHover={{ scale: 1.05 }}
+                                transition={{
+                                    ease: "easeOut",
+                                    duration: 0.3,
+                                    delay: isMobile ? 0 : 0.2 + idx * 0.1,
+                                }}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false, amount: 0.2 }}
+                            >
+                                {techItem.icon}
+                                <p className="text-base font-medium">{techItem.label}</p>
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </motion.div>
         </motion.div>

@@ -176,8 +176,6 @@ function Projects() {
                     </motion.div>
                 ))}
             </div>
-             <hr className='text-gray-600 mt-20'
-              />
         </section>
     );
 }

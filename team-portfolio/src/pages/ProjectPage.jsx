@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaTimes } from 'react-icons/fa';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaPhp } from 'react-icons/fa';
-import { SiMysql, SiBootstrap } from 'react-icons/si';
+import { FaHtml5, FaCss3, FaJsSquare, FaPhp, FaBootstrap, FaDatabase } from 'react-icons/fa';
 import Footer from '../components/Footer';
 import logo from '../assets/logo.png';
 import Payroll from "../assets/Expensa.png";
@@ -64,16 +63,16 @@ function ProjectPage() {
       ],
       technologies: [
         [<FaHtml5 className="mr-1" />, "HTML", "bg-orange-500 zoom-in"],
-        [<FaCss3Alt className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
+        [<FaCss3 className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
         [<FaJsSquare className="mr-1" />, "Javascript", "bg-yellow-400 text-black zoom-in"],
-        [<SiBootstrap className="mr-1" />, "Bootstrap", "bg-purple-600 zoom-in"],
-        [<SiMysql className="mr-1" />, "MySQL", "bg-blue-700 zoom-in"],
+        [<FaBootstrap className="mr-1" />, "Bootstrap", "bg-purple-600 zoom-in"],
+        [<FaDatabase className="mr-1" />, "MySQL", "bg-blue-700 zoom-in"],
         [<FaPhp className="mr-1" />, "PHP", "bg-gray-600 zoom-in"],
       ]
     },
     {
       title: "Payroll Management System",
-      description: "Efficiently manage employee compensation...",
+      description: "Efficiently manage employee compensation with accurate and automated payroll processing.",
       image: Payroll,
       screenshots: [
         { src: payrollss1, label: "Login/Signup", className: "zoom-in"  },
@@ -82,10 +81,10 @@ function ProjectPage() {
       ],
       technologies: [
         [<FaHtml5 className="mr-1" />, "HTML", "bg-orange-500 zoom-in"],
-        [<FaCss3Alt className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
+        [<FaCss3 className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
         [<FaJsSquare className="mr-1" />, "Javascript", "bg-yellow-400 text-black zoom-in"],
-        [<SiBootstrap className="mr-1" />, "Bootstrap", "bg-purple-600 zoom-in"],
-        [<SiMysql className="mr-1" />, "MySQL", "bg-blue-700 zoom-in"],
+        [<FaBootstrap className="mr-1" />, "Bootstrap", "bg-purple-600 zoom-in"],
+        [<FaDatabase className="mr-1" />, "MySQL", "bg-blue-700 zoom-in"],
         [<FaPhp className="mr-1" />, "PHP", "bg-gray-600 zoom-in"],
       ],
     },
@@ -100,16 +99,16 @@ function ProjectPage() {
       ],
       technologies: [
         [<FaHtml5 className="mr-1" />, "HTML", "bg-orange-500 zoom-in"],
-        [<FaCss3Alt className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
+        [<FaCss3 className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
         [<FaJsSquare className="mr-1" />, "Javascript", "bg-yellow-400 text-black zoom-in"],
-        [<SiBootstrap className="mr-1" />, "Bootstrap", "bg-purple-600 zoom-in"],
-        [<SiMysql className="mr-1" />, "MySQL", "bg-blue-700 zoom-in"],
+        [<FaBootstrap className="mr-1" />, "Bootstrap", "bg-purple-600 zoom-in"],
+        [<FaDatabase className="mr-1" />, "MySQL", "bg-blue-700 zoom-in"],
         [<FaPhp className="mr-1" />, "PHP", "bg-gray-600 zoom-in"],
       ],
     },
     {
       title: "Alumni Management System",
-      description: "Connect and engage with past graduates...",
+      description: "Seamlessly connect and engage with past graduates through our intuitive alumni platform.",
       image: Alumni,
       screenshots: [
         { src: alumniss1, label: "Homepage", className: "zoom-in"  },
@@ -118,10 +117,10 @@ function ProjectPage() {
       ],
       technologies: [
         [<FaHtml5 className="mr-1" />, "HTML", "bg-orange-500 zoom-in"],
-        [<FaCss3Alt className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
+        [<FaCss3 className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
         [<FaJsSquare className="mr-1" />, "Javascript", "bg-yellow-400 text-black zoom-in"],
-        [<SiBootstrap className="mr-1" />, "Bootstrap", "bg-purple-600 zoom-in"],
-        [<SiMysql className="mr-1" />, "MySQL", "bg-blue-700 zoom-in"],
+        [<FaBootstrap className="mr-1" />, "Bootstrap", "bg-purple-600 zoom-in"],
+        [<FaDatabase className="mr-1" />, "MySQL", "bg-blue-700 zoom-in"],
         [<FaPhp className="mr-1" />, "PHP", "bg-gray-600 zoom-in"],
       ],
     },
@@ -136,7 +135,7 @@ function ProjectPage() {
       ],
       technologies: [
         [<FaHtml5 className="mr-1" />, "HTML", "bg-orange-500 zoom-in"],
-        [<FaCss3Alt className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
+        [<FaCss3 className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
       ],
     },
     {
@@ -150,7 +149,7 @@ function ProjectPage() {
       ],
       technologies: [
         [<FaHtml5 className="mr-1" />, "HTML", "bg-orange-500 zoom-in"],
-        [<FaCss3Alt className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
+        [<FaCss3 className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
       ],
     },
     {
@@ -164,7 +163,7 @@ function ProjectPage() {
       ],
       technologies: [
         [<FaHtml5 className="mr-1" />, "HTML", "bg-orange-500 zoom-in"],
-        [<FaCss3Alt className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
+        [<FaCss3 className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
       ],
     },
     {
@@ -178,7 +177,7 @@ function ProjectPage() {
       ],
       technologies: [
         [<FaHtml5 className="mr-1" />, "HTML", "bg-orange-500 zoom-in"],
-        [<FaCss3Alt className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
+        [<FaCss3 className="mr-1" />, "CSS", "bg-blue-500 zoom-in"],
       ],
     },
   ];
@@ -276,6 +275,7 @@ function ProjectPage() {
                   ProjectImg={project.image}
                   ProjectTitle={project.title}
                   ProjectDesc={project.description}
+                  technologies={project.technologies}
                 />
               </div>
             ))}

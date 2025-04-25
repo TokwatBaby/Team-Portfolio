@@ -2,13 +2,13 @@ import facebook from '../assets/facebook.png';
 import linkedin from '../assets/linkedin.png';
 import github from '../assets/github.png';
 import x from '../assets/x.png';
-import Input from './Input';
+import Input from '../components/Input';
 import { motion } from "framer-motion";
 import { useState, useEffect } from 'react';
 
 
 
-function ContactPage() {
+function Contact() {
 
     const [isMobile, setIsMobile] = useState(false);
 
@@ -142,4 +142,4 @@ function ContactPage() {
 
 }
 
-export default ContactPage
+export default Contact
