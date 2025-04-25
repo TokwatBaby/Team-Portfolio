@@ -30,7 +30,7 @@ function Expertise() {
             </motion.p>
 
 
-            <div className="border border-1 bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] rounded-lg p-1">
+            <div className="border bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] rounded-lg p-1">
                 <div className="frontend font-bold text-4xl text-white bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)] rounded-lg p-10">
                     <motion.p
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
@@ -136,7 +136,7 @@ function Expertise() {
                     </div>
                 </div>
             </div>
-            <div className="border border-1 bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] rounded-lg p-1">
+            <div className="border bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] rounded-lg p-1">
                 <div className="frontend font-bold text-4xl text-white bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)] rounded-lg p-10">
                 <motion.p
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
@@ -204,7 +204,7 @@ function Expertise() {
                     </div>
                 </div>
             </div>
-            <div className="border border-1 bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] rounded-lg p-1">
+            <div className="border bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2] rounded-lg p-1">
                 <div className="frontend font-bold text-4xl text-white bg-[linear-gradient(to_bottom,_#0D0D0D,_#1E1E1E)] rounded-lg p-10">
                 <motion.p
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
