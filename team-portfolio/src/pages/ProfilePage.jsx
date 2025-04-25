@@ -149,7 +149,7 @@ function Profilepage() {
     }, []);
     const teamMembers = [
         {
-            name: "Jan Harvey, Javier",
+            name: "Jan Harvey Javier",
             role: "Full Stack Developer",
             title: "I'm a coding student focused on full stack development. I love tackling programming challenges and creating websites while learning both front-end and back-end skills.",
             profileImg: profileImg1,
@@ -195,7 +195,7 @@ function Profilepage() {
 
         },
         {
-            name: "Dhaniel, Lofamia",
+            name: "Dhaniel Lofamia",
             role: "Full Stack Developer",
             title: "I am a Full Stack Developer student with strong eagerness to learn and grow in the world of coding. I like to solve complex and logical problems, building dynamic web applications and continuously expanding my knowledge of front-end and back-end technologies.",
             profileImg: profileImg,
@@ -284,7 +284,7 @@ function Profilepage() {
 
         },
         {
-            name: "John Patrick, Macaspac",
+            name: "John Patrick Macaspac",
             role: "Front End Developer",
             title: "I'm a front-end development student who loves turning designs into interactive websites. I'm constantly improving my skills in web technologies to create responsive and accessible user interfaces.",
             profileImg: profileImg2,
@@ -331,7 +331,7 @@ function Profilepage() {
 
         },
         {
-            name: "Rodney, Santos",
+            name: "Rodney Santos",
             role: "Front End Developer",
             title: "I'm a student learning front-end development with a passion for creating visually appealing and user-friendly websites. I enjoy working with HTML, CSS, and JavaScript to build engaging web experiences.",
             profileImg: profileImg4,
