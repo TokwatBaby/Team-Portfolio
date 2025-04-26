@@ -1,4 +1,4 @@
-import groupPic from '../assets/grouppic.png';
+import groupPic from '../assets/teampic.png';
 import { IdCard, Goal } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from 'react';
